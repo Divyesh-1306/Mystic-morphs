@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 283 89% 9%;
+    --foreground: 44 87% 78%;
+
+    --card: 280 85% 12%;
+    --card-foreground: 44 87% 85%;
+
+    --popover: 280 85% 12%;
+    --popover-foreground: 44 87% 85%;
+
+    --primary: 44 87% 65%;
+    --primary-foreground: 283 89% 9%;
+
+    --secondary: 275 78% 25%;
+    --secondary-foreground: 44 87% 88%;
+
+    --muted: 275 60% 20%;
+    --muted-foreground: 44 40% 60%;
+
+    --accent: 44 87% 65%;
+    --accent-foreground: 283 89% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 44 87% 88%;
+
+    --border: 275 40% 25%;
+    --input: 275 40% 25%;
+    --ring: 44 87% 65%;
+
+    --magical-glow: 44 100% 70%;
+    --magical-purple: 275 85% 35%;
+    --magical-deep: 283 89% 5%;
+    --magical-light: 44 87% 88%;
+    
+    --gradient-magical: linear-gradient(135deg, hsl(var(--magical-purple)), hsl(var(--primary)));
+    --gradient-glow: linear-gradient(180deg, hsl(var(--magical-glow) / 0.1), transparent);
+    --gradient-door: linear-gradient(90deg, hsl(var(--magical-deep)), hsl(var(--magical-purple)), hsl(var(--magical-deep)));
+    
+    --shadow-magical: 0 10px 40px hsl(var(--primary) / 0.3);
+    --shadow-glow: 0 0 50px hsl(var(--magical-glow) / 0.6);
+    
+    --radius: 0.8rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 283 89% 9%;
+    --foreground: 44 87% 78%;
+
+    --card: 280 85% 12%;
+    --card-foreground: 44 87% 85%;
+
+    --popover: 280 85% 12%;
+    --popover-foreground: 44 87% 85%;
+
+    --primary: 44 87% 65%;
+    --primary-foreground: 283 89% 9%;
+
+    --secondary: 275 78% 25%;
+    --secondary-foreground: 44 87% 88%;
+
+    --muted: 275 60% 20%;
+    --muted-foreground: 44 40% 60%;
+
+    --accent: 44 87% 65%;
+    --accent-foreground: 283 89% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 44 87% 88%;
+
+    --border: 275 40% 25%;
+    --input: 275 40% 25%;
+    --ring: 44 87% 65%;
+    --sidebar-background: 283 89% 7%;
+    --sidebar-foreground: 44 87% 78%;
+    --sidebar-primary: 44 87% 65%;
+    --sidebar-primary-foreground: 283 89% 9%;
+    --sidebar-accent: 275 78% 25%;
+    --sidebar-accent-foreground: 44 87% 88%;
+    --sidebar-border: 275 40% 25%;
+    --sidebar-ring: 44 87% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-serif;
+    overflow-x: hidden;
+  }
+  
+  .magical-glow {
+    text-shadow: 0 0 20px hsl(var(--magical-glow));
+  }
+  
+  .spell-shimmer {
+    background: var(--gradient-magical);
+    background-size: 200% 200%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .particle-trail {
+    position: fixed;
+    pointer-events: none;
+    width: 6px;
+    height: 6px;
+    background: hsl(var(--magical-glow));
+    border-radius: 50%;
+    box-shadow: 0 0 12px hsl(var(--magical-glow));
+    z-index: 1000;
+  }
+  
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes doorOpen {
+    0% { transform: translateX(0) rotateY(0deg); }
+    100% { transform: translateX(-100%) rotateY(-70deg); }
+  }
+  
+  @keyframes doorOpenRight {
+    0% { transform: translateX(0) rotateY(0deg); }
+    100% { transform: translateX(100%) rotateY(70deg); }
+  }
+  
+  @keyframes magicalGlow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--magical-glow) / 0.5); }
+    50% { box-shadow: 0 0 40px hsl(var(--magical-glow) / 0.8); }
+  }
+  
+  @keyframes spellRing {
+    from { transform: rotate(0deg) scale(0.8); opacity: 0; }
+    50% { opacity: 1; }
+    to { transform: rotate(360deg) scale(1.2); opacity: 0; }
+  }
+  
+  @keyframes zoomThrough {
+    0% { transform: scale(1) translateZ(0); }
+    100% { transform: scale(50) translateZ(1000px); }
+  }
+}
