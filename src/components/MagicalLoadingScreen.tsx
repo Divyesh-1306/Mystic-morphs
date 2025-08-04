@@ -65,7 +65,7 @@ const MagicalLoadingScreen = ({ onComplete }: MagicalLoadingScreenProps) => {
 
       {/* Door Container */}
       <div className="absolute inset-0 flex items-center justify-center perspective-1000">
-        <div className="relative w-96 h-[600px] transform-gpu">
+        <div className="relative w-full max-w-xs h-80 sm:w-96 sm:h-[600px] transform-gpu">
           
           {/* Magical Rings */}
           {phase !== 'loading' && (
@@ -114,8 +114,8 @@ const MagicalLoadingScreen = ({ onComplete }: MagicalLoadingScreenProps) => {
 
           {/* Loading Text */}
           {phase === 'loading' && (
-            <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2">
-              <p className="text-primary font-magical text-xl tracking-wider animate-magical-pulse">
+            <div className="absolute -bottom-12 sm:-bottom-20 left-1/2 transform -translate-x-1/2">
+              <p className="text-primary font-magical text-base sm:text-xl tracking-wider animate-magical-pulse">
                 Summoning Magic...
               </p>
             </div>
