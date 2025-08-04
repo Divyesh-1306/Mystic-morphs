@@ -37,7 +37,7 @@ const MysticMorphsPage = () => {
             <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-magical-glow rounded-full animate-magical-pulse" style={{ animationDelay: '1.5s' }}></div>
           </div>
           <div className="flex items-center relative z-20">
-          <img src="assets/logo.png" alt="Mystic Morphs Logo" style={{height:'100px' , marginBottom:'54px'}} />
+          <img src="/logo.png" alt="Mystic Morphs Logo" style={{height:'100px' , marginBottom:'54px'}} />
           <h1 className="text-7xl md:text-8xl font-magical text-primary mb-6 magical-glow animate-fade-in-up tracking-wider">
             Mystic Morphs
           </h1>
