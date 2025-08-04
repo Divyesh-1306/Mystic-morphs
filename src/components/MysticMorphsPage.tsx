@@ -36,33 +36,30 @@ const MysticMorphsPage = () => {
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-4 h-4 bg-magical-light rounded-full animate-magical-pulse" style={{ animationDelay: '1s' }}></div>
             <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-magical-glow rounded-full animate-magical-pulse" style={{ animationDelay: '1.5s' }}></div>
           </div>
-          <div className="flex items-center relative z-20">
-          <img src="/logo.png" alt="Mystic Morphs Logo" style={{height:'100px' , marginBottom:'54px'}} />
-          <h1 className="text-7xl md:text-8xl font-magical text-primary mb-6 magical-glow animate-fade-in-up tracking-wider">
-            Mystic Morphs
-          </h1>
+          <div className="flex flex-col items-center md:flex-row md:justify-center relative z-20 gap-4 md:gap-8">
+            <img src="/logo.png" alt="Mystic Morphs Logo"
+              className="h-20 md:h-28 mb-4 md:mb-0" />
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-magical text-primary mb-4 md:mb-6 magical-glow animate-fade-in-up tracking-wider text-center md:text-left">
+              Mystic Morphs
+            </h1>
           </div>
-          <p className="text-2xl md:text-3xl text-foreground/90 mb-8 animate-fade-in-up leading-relaxed max-w-4xl mx-auto" style={{ animationDelay: '0.3s' }}>
+          <p className="text-lg sm:text-xl md:text-3xl text-foreground/90 mb-6 md:mb-8 animate-fade-in-up leading-relaxed max-w-xl md:max-w-4xl mx-auto text-center">
             Unravel the Mystery. Decode the Glitch. <br />
             <span className="text-primary font-magical">Morph into the Ultimate Tech Wizards.</span>
           </p>
-          
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <Button
-  variant="hero"
-  size="hero"
-  className="group"
-  onClick={() => {
-    const el = document.getElementById('quest-begin-section');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  }}
->
-  <span className="relative z-10">Begin Your Quest</span>
-  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-</Button>
-          </div>
+          <Button
+            variant="hero"
+            size="hero"
+            className="group w-full max-w-xs mx-auto"
+            onClick={() => {
+              const el = document.getElementById('quest-begin-section');
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            <span className="relative z-10">Begin Your Quest</span>
+          </Button>
         </div>
 
         {/* Scroll indicator */}
@@ -122,16 +119,17 @@ const MysticMorphsPage = () => {
       <section id="registration-section" className="py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <SpellCard variant="floating" delay={600}>
-            <a href="https://forms.gle/W15XosJ5qzrWvwKG8" target="_blank" rel="noopener noreferrer">
-              <Button variant="magical" size="hero" className="text-xl">
-                🎭 Register Now for Glory
-              </Button>
-            </a>
-            <div className="flex justify-center mt-8">
-              <img 
-                src={qrScannerImg} 
-                alt="QR Scanner for Registration" 
-                style={{ maxWidth: '240px', width: '100%', height: 'auto', borderRadius: '1rem', boxShadow: '0 4px 24px rgba(0,0,0,0.12)' }}
+            <div className="flex flex-col items-center justify-center mt-8 gap-4">
+              <a href="https://forms.gle/W15XosJ5qzrWvwKG8" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs">
+                <Button variant="magical" size="hero" className="text-lg sm:text-xl w-full">
+                  🎭 Register Now for Glory
+                </Button>
+              </a>
+              <img
+                src={qrScannerImg}
+                alt="QR Scanner for Registration"
+                className="max-w-xs w-full h-auto rounded-xl shadow-lg"
+                style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.12)' }}
               />
             </div>
           </SpellCard>
