@@ -111,6 +111,10 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  body, button, .button, [role="button"] {
+    cursor: url('/favicon-32x32.png'), auto;
+  }
+  
   body {
     @apply bg-background text-foreground font-serif;
     overflow-x: hidden;

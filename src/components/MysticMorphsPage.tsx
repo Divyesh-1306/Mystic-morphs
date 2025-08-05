@@ -243,6 +243,11 @@ const MysticMorphsPage = () => {
                     <p className="text-foreground/80">[+91 81489 32397]</p>
                     <p className="text-foreground/80">[22am222@stjosephs.ac.in]</p>
                   </div>
+                  <div className="p-4 bg-gradient-magical/20 rounded-lg border border-primary/30">
+                    <p className="font-semibold text-foreground">Lithika shri A</p>
+                    <p className="text-foreground/80">[+91 91769 79220]</p>
+                    <p className="text-foreground/80">[22am151@stjosephs.ac.in]</p>
+                  </div>
                 </div>
               </div>
             </div>
