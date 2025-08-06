@@ -8,12 +8,11 @@ const MysticMorphsPage = () => {
     "Each team must consist of 2 members only – no solo entries allowed.",
     "Laptop is mandatory for participation; ensure it's fully charged.",
     "Participants must report by 8:45 A.M sharp for briefing.",
-    "Time constraints must be strictly followed – late submissions will not be accepted.",
+    "Time constraints must be strictly followed – as they are used for evaluating th results.",
     "All rounds will be conducted exclusively on the provided event website.",
     "No use of mobile phones or external assistance during the event.",
     "Internet access should only be through the provided tools – no external browsing.",
     "Participants must not switch tabs or use unauthorized applications during the event.",
-    "Misbehavior, malpractice, or plagiarism will lead to immediate disqualification.",
     "The decision of the coordinators/judges is final and binding in all matters."
   ];
 
@@ -52,6 +51,9 @@ const MysticMorphsPage = () => {
             size="hero"
             className="group w-full max-w-xs mx-auto"
             onClick={() => {
+              const audio = new Audio('/mixkit-sci-fi-futuristic-door-open-2527.wav');
+              audio.volume = 0.7;
+              audio.play();
               const el = document.getElementById('quest-begin-section');
               if (el) {
                 el.scrollIntoView({ behavior: 'smooth' });
@@ -189,7 +191,7 @@ const MysticMorphsPage = () => {
               <div className="space-y-6">
                 <p className="text-2xl text-magical-glow font-semibold">🧠 Prove your wizardry in the chamber of code.</p>
                 <p className="text-lg text-foreground/90 leading-relaxed">
-                  Face 2 cursed algorithms packed with hidden logic traps. Analyze and purify them with your debugging spells.
+                  Face 2 cursed Python algorithms packed with hidden logic traps. Analyze and purify them with your debugging spells.
                 </p>
                 <div className="grid md:grid-cols-2 gap-8 mt-8">
                   <div className="space-y-4">
@@ -218,7 +220,26 @@ const MysticMorphsPage = () => {
             <h2 className="text-4xl font-magical text-primary mb-12 text-center magical-glow">
               Summon the Scribes
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Faculty Coordinators (left) */}
+              <div className="space-y-6">
+                <h4 className="text-primary font-semibold text-xl mb-4">🧑‍🏫 Faculty Coordinators</h4>
+                <div className="space-y-4">
+                  <div className="p-4 bg-gradient-magical/20 rounded-lg border border-primary/30">
+                    <p className="font-semibold text-foreground">Dr. G. Manikandan</p>
+                    <p className="text-foreground/80">[manikandang@stjosephs.ac.in]</p>
+                  </div>
+                  <div className="p-4 bg-gradient-magical/20 rounded-lg border border-primary/30">
+                    <p className="font-semibold text-foreground">Ms. Thiraviaselvi</p>
+                    <p className="text-foreground/80">[thiraviyaselvig@stjosephs.ac.in]</p>
+                  </div>
+                  <div className="p-4 bg-gradient-magical/20 rounded-lg border border-primary/30">
+                    <p className="font-semibold text-foreground">Ms. Shaafia Tasneem</p>
+                    <p className="text-foreground/80">[shaafia28@stjosephs.ac.in]</p>
+                  </div>
+                </div>
+              </div>
+              {/* When/Where (center) */}
               <div className="space-y-6">
                 <div className="p-6 bg-card/20 backdrop-blur-sm rounded-lg border border-primary/30">
                   <h4 className="text-primary font-semibold text-xl mb-2">⏰ When</h4>
@@ -230,22 +251,20 @@ const MysticMorphsPage = () => {
                   <p className="text-foreground/90">Venue: [St. Josephs's Collge of Engineering]</p>
                 </div>
               </div>
+              {/* Event Coordinators (right) */}
               <div className="space-y-6">
                 <h4 className="text-primary font-semibold text-xl mb-4">🧙‍♂️ Event Coordinators</h4>
                 <div className="space-y-4">
                   <div className="p-4 bg-gradient-magical/20 rounded-lg border border-primary/30">
                     <p className="font-semibold text-foreground">Manoj D</p>
-                    <p className="text-foreground/80">[+91 63693 15327 ]</p>
                     <p className="text-foreground/80">[22am231@stjosephs.ac.in]</p>
                   </div>
                   <div className="p-4 bg-gradient-magical/20 rounded-lg border border-primary/30">
                     <p className="font-semibold text-foreground">Maha Sri S</p>
-                    <p className="text-foreground/80">[+91 81489 32397]</p>
                     <p className="text-foreground/80">[22am222@stjosephs.ac.in]</p>
                   </div>
                   <div className="p-4 bg-gradient-magical/20 rounded-lg border border-primary/30">
                     <p className="font-semibold text-foreground">Lithika shri A</p>
-                    <p className="text-foreground/80">[+91 91769 79220]</p>
                     <p className="text-foreground/80">[22am151@stjosephs.ac.in]</p>
                   </div>
                 </div>
